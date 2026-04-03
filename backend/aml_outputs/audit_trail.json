@@ -1,0 +1,3975 @@
+[
+  {
+    "timestamp": "2026-02-19T14:57:50.311765Z",
+    "account_id": "1075524474",
+    "anomaly_score": 1.0,
+    "rule_score": 1,
+    "typology": "Unclassified",
+    "typology_confidence": 0.0,
+    "top_anomaly_features": "amt_std, amt_max, amt_mean",
+    "rule_triggers": "Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 3.0,
+      "amt_mean": 3318569.75,
+      "amt_std": 5733779.5,
+      "amt_max": 9939368.0,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0,
+      "fan_out_ratio": 0.6667,
+      "tx_per_day": 0.75
+    },
+    "graph_features": {
+      "out_degree": 2.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "254333209",
+      "1691431236",
+      "6569397251",
+      "5256260951",
+      "9126482714"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-12-28 00:00:00",
+        "from": "1075524474",
+        "to": "9126482714",
+        "amount": 9939368.0,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-12-16 00:00:00",
+        "from": "5256260951",
+        "to": "1075524474",
+        "amount": 2589.760009765625,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-12-31 00:00:00",
+        "from": "1075524474",
+        "to": "1691431236",
+        "amount": 7973.7998046875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-12-31 00:00:00",
+        "from": "1075524474",
+        "to": "1691431236",
+        "amount": 8366.98046875,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 1075524474 was flagged by the AML detection system with an anomaly score of 1.000. While no dominant typology was conclusively matched, the following rule violations were recorded: Single transaction >$100k: large value movement. Manual review is recommended to determine SAR eligibility. Linked accounts identified: 254333209, 1691431236, 6569397251, 5256260951, 9126482714."
+  },
+  {
+    "timestamp": "2026-02-19T14:57:56.809996Z",
+    "account_id": "5050052745",
+    "anomaly_score": 0.9500471949577332,
+    "rule_score": 3,
+    "typology": "Round-Tripping",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "betweenness, total_degree, pagerank",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 41.0,
+      "amt_mean": 22942.7168,
+      "amt_std": 81046.2578,
+      "amt_max": 526858.4375,
+      "cross_border_ratio": 0.0488,
+      "currency_mismatch_rate": 0.0488,
+      "fan_out_ratio": 0.5854,
+      "tx_per_day": 0.494
+    },
+    "graph_features": {
+      "out_degree": 24.0,
+      "in_degree": 16.0,
+      "pagerank": 5.8e-05,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "5007361375",
+      "9069177659",
+      "3467899032",
+      "6757399370",
+      "732489736",
+      "7133920143",
+      "9495732195",
+      "5410810461",
+      "5989802537",
+      "9405512678"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-08 00:00:00",
+        "from": "5050052745",
+        "to": "9180640818",
+        "amount": 23580.08984375,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-25 00:00:00",
+        "from": "5050052745",
+        "to": "4269652792",
+        "amount": 526858.4375,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-09 00:00:00",
+        "from": "5410810461",
+        "to": "5050052745",
+        "amount": 8742.5302734375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-09 00:00:00",
+        "from": "5410810461",
+        "to": "5050052745",
+        "amount": 8897.4404296875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-09 00:00:00",
+        "from": "7613686685",
+        "to": "5050052745",
+        "amount": 4534.43017578125,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 5050052745 is embedded within a detected transaction cycle (strongly connected component), a classic indicator of round-tripping. The account processed 41 transactions totalling approximately $526,858 (peak single transaction). The cyclic flow pattern combined with an anomaly score of 0.950 warrants further investigation. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement. Linked accounts identified: 5007361375, 9069177659, 3467899032, 6757399370, 732489736."
+  },
+  {
+    "timestamp": "2026-02-19T14:58:03.297127Z",
+    "account_id": "8962208178",
+    "anomaly_score": 0.914604902267456,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "tx_count, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 68.0,
+      "amt_mean": 16189.5625,
+      "amt_std": 64848.1875,
+      "amt_max": 541620.5625,
+      "cross_border_ratio": 0.1765,
+      "currency_mismatch_rate": 0.2353,
+      "fan_out_ratio": 0.4265,
+      "tx_per_day": 1.193
+    },
+    "graph_features": {
+      "out_degree": 29.0,
+      "in_degree": 12.0,
+      "pagerank": 4.5e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "3785348748",
+      "5389810939",
+      "8673671400",
+      "1500453266",
+      "86308008",
+      "9500987630",
+      "1842619462",
+      "1178492127",
+      "2450691507",
+      "7677462991"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-17 00:00:00",
+        "from": "8962208178",
+        "to": "1842619462",
+        "amount": 394.010009765625,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-20 00:00:00",
+        "from": "8962208178",
+        "to": "3524638102",
+        "amount": 15560.1396484375,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-18 00:00:00",
+        "from": "8962208178",
+        "to": "5389810939",
+        "amount": 831.6099853515625,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-02 00:00:00",
+        "from": "8962208178",
+        "to": "3785348748",
+        "amount": 22786.33984375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-11-02 00:00:00",
+        "from": "8962208178",
+        "to": "86308008",
+        "amount": 5682.31982421875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 8962208178 exhibited multi-currency layering indicators: 68 transactions with a currency mismatch rate of 23.5% and a cross-border ratio of 17.6%. Network analysis identified the account as a node in a 41-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.915. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 3785348748, 5389810939, 8673671400, 1500453266, 86308008."
+  },
+  {
+    "timestamp": "2026-02-19T14:58:08.761767Z",
+    "account_id": "2149901234",
+    "anomaly_score": 0.9086303114891052,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, amt_std, burst_score",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 18.0,
+      "amt_mean": 263878.25,
+      "amt_std": 1105182.0,
+      "amt_max": 4692191.5,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0,
+      "fan_out_ratio": 0.8889,
+      "tx_per_day": 0.24
+    },
+    "graph_features": {
+      "out_degree": 16.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "3958715314",
+      "6360134652",
+      "8906843355",
+      "5927779944",
+      "5545988741",
+      "2327760056",
+      "5522110866",
+      "9082816936",
+      "5077259356",
+      "2147273086"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-11-30 00:00:00",
+        "from": "2149901234",
+        "to": "5804990951",
+        "amount": 4692191.5,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-17 00:00:00",
+        "from": "2149901234",
+        "to": "5943180107",
+        "amount": 214.52000427246094,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "2149901234",
+        "to": "5927779944",
+        "amount": 656.1799926757812,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-22 00:00:00",
+        "from": "2149901234",
+        "to": "878987229",
+        "amount": 748.9400024414062,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-30 00:00:00",
+        "from": "2149901234",
+        "to": "8906843355",
+        "amount": 2131.159912109375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 2149901234 exhibited multi-currency layering indicators: 18 transactions with a currency mismatch rate of 0.0% and a cross-border ratio of 0.0%. Network analysis identified the account as a node in a 17-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.909. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 3958715314, 6360134652, 8906843355, 5927779944, 5545988741."
+  },
+  {
+    "timestamp": "2026-02-19T14:58:15.051554Z",
+    "account_id": "4665158752",
+    "anomaly_score": 0.9011290073394775,
+    "rule_score": 4,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "burst_score, amt_cv, pagerank",
+    "rule_triggers": "Currency mismatch >50%: potential conversion layering; Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 26.0,
+      "amt_mean": 23373.2852,
+      "amt_std": 86932.2969,
+      "amt_max": 449196.875,
+      "cross_border_ratio": 0.6923,
+      "currency_mismatch_rate": 0.7308,
+      "fan_out_ratio": 0.7308,
+      "tx_per_day": 0.4727
+    },
+    "graph_features": {
+      "out_degree": 19.0,
+      "in_degree": 14.0,
+      "pagerank": 5.2e-05,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "5412054241",
+      "7758203928",
+      "5904148701",
+      "6429250875",
+      "4805666303",
+      "4696905660",
+      "4534246056",
+      "7272891561",
+      "1137647003",
+      "9733659235"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "4665158752",
+        "to": "151444619",
+        "amount": 447.9599914550781,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-07 00:00:00",
+        "from": "4665158752",
+        "to": "78066203",
+        "amount": 3054.06005859375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-11-20 00:00:00",
+        "from": "4665158752",
+        "to": "2883341331",
+        "amount": 6720.18994140625,
+        "currency": "US dollar",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-11-20 00:00:00",
+        "from": "4665158752",
+        "to": "2883341331",
+        "amount": 6681.830078125,
+        "currency": "US dollar",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-11-23 00:00:00",
+        "from": "4665158752",
+        "to": "6726378816",
+        "amount": 16476.619140625,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4665158752 exhibited multi-currency layering indicators: 26 transactions with a currency mismatch rate of 73.1% and a cross-border ratio of 69.2%. Network analysis identified the account as a node in a 33-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.901. Rule triggers: Currency mismatch >50%: potential conversion layering; Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement. Linked accounts identified: 5412054241, 7758203928, 5904148701, 6429250875, 4805666303."
+  },
+  {
+    "timestamp": "2026-02-19T14:58:21.230061Z",
+    "account_id": "5061861850",
+    "anomaly_score": 0.8868624567985535,
+    "rule_score": 1,
+    "typology": "Unclassified",
+    "typology_confidence": 0.0,
+    "top_anomaly_features": "amt_std, amt_max, amt_mean",
+    "rule_triggers": "Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 3.0,
+      "amt_mean": 1401922.375,
+      "amt_std": 2421696.75,
+      "amt_max": 4198254.0,
+      "cross_border_ratio": 0.3333,
+      "currency_mismatch_rate": 0.3333,
+      "fan_out_ratio": 1.0,
+      "tx_per_day": 0.1071
+    },
+    "graph_features": {
+      "out_degree": 3.0,
+      "in_degree": 10.0,
+      "pagerank": 3.8e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "1211459777",
+      "9889225930",
+      "1070351769",
+      "9574340565",
+      "4327548283",
+      "1534642148",
+      "2709487922",
+      "5134435292",
+      "2650084422",
+      "6257422775"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-11-23 00:00:00",
+        "from": "5061861850",
+        "to": "520713149",
+        "amount": 4198254.0,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-11-29 00:00:00",
+        "from": "1534642148",
+        "to": "5061861850",
+        "amount": 11837365.0,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-24 00:00:00",
+        "from": "3137540462",
+        "to": "5061861850",
+        "amount": 1640.93994140625,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-10-27 00:00:00",
+        "from": "5061861850",
+        "to": "2709487922",
+        "amount": 267.8500061035156,
+        "currency": "UK pounds",
+        "type": "Cash Withdrawal"
+      },
+      {
+        "date": "2022-11-08 00:00:00",
+        "from": "5061861850",
+        "to": "5134435292",
+        "amount": 7245.10986328125,
+        "currency": "UK pounds",
+        "type": "Cross-border"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 5061861850 was flagged by the AML detection system with an anomaly score of 0.887. While no dominant typology was conclusively matched, the following rule violations were recorded: Single transaction >$100k: large value movement. Manual review is recommended to determine SAR eligibility. Linked accounts identified: 1211459777, 9889225930, 1070351769, 9574340565, 4327548283."
+  },
+  {
+    "timestamp": "2026-02-19T14:58:28.397878Z",
+    "account_id": "1534642148",
+    "anomaly_score": 0.8814849853515625,
+    "rule_score": 1,
+    "typology": "Unclassified",
+    "typology_confidence": 0.0,
+    "top_anomaly_features": "amt_mean, amt_max, fan_out_ratio",
+    "rule_triggers": "Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 1.0,
+      "amt_mean": 11837365.0,
+      "amt_std": 0.0,
+      "amt_max": 11837365.0,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0,
+      "fan_out_ratio": 1.0,
+      "tx_per_day": 1.0
+    },
+    "graph_features": {
+      "out_degree": 1.0,
+      "in_degree": 0.0,
+      "pagerank": 3e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "520713149",
+      "2709487922",
+      "5061861850",
+      "5134435292"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-11-29 00:00:00",
+        "from": "1534642148",
+        "to": "5061861850",
+        "amount": 11837365.0,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 1534642148 was flagged by the AML detection system with an anomaly score of 0.881. While no dominant typology was conclusively matched, the following rule violations were recorded: Single transaction >$100k: large value movement. Manual review is recommended to determine SAR eligibility. Linked accounts identified: 520713149, 2709487922, 5061861850, 5134435292."
+  },
+  {
+    "timestamp": "2026-02-19T14:58:38.485099Z",
+    "account_id": "4554347877",
+    "anomaly_score": 0.8789666295051575,
+    "rule_score": 4,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "amt_max, pagerank, burst_score",
+    "rule_triggers": "Cross-border ratio >80%: potential geographic dispersion; Currency mismatch >50%: potential conversion layering; Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 14.0,
+      "amt_mean": 50350.0508,
+      "amt_std": 179142.4531,
+      "amt_max": 672687.1875,
+      "cross_border_ratio": 0.8571,
+      "currency_mismatch_rate": 0.8571,
+      "fan_out_ratio": 0.9286,
+      "tx_per_day": 0.1944
+    },
+    "graph_features": {
+      "out_degree": 13.0,
+      "in_degree": 16.0,
+      "pagerank": 5.8e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "6892464288",
+      "8791058888",
+      "51252312",
+      "5293306085",
+      "6216140926",
+      "3676255420",
+      "1449429693",
+      "4041658863",
+      "4713401213",
+      "6829500668"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-13 00:00:00",
+        "from": "4554347877",
+        "to": "5945279866",
+        "amount": 80.12000274658203,
+        "currency": "Mexican Peso",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-09 00:00:00",
+        "from": "4554347877",
+        "to": "1287588481",
+        "amount": 1438.6199951171875,
+        "currency": "Mexican Peso",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "4554347877",
+        "to": "6892464288",
+        "amount": 672687.1875,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-20 00:00:00",
+        "from": "4554347877",
+        "to": "9886596080",
+        "amount": 9624.51953125,
+        "currency": "Mexican Peso",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-27 00:00:00",
+        "from": "4554347877",
+        "to": "5350917854",
+        "amount": 1496.4100341796875,
+        "currency": "Mexican Peso",
+        "type": "Cross-border"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4554347877 exhibited multi-currency layering indicators: 14 transactions with a currency mismatch rate of 85.7% and a cross-border ratio of 85.7%. Network analysis identified the account as a node in a 29-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.879. Rule triggers: Cross-border ratio >80%: potential geographic dispersion; Currency mismatch >50%: potential conversion layering; Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 6892464288, 8791058888, 51252312, 5293306085, 6216140926."
+  },
+  {
+    "timestamp": "2026-02-19T14:58:47.142516Z",
+    "account_id": "4574851353",
+    "anomaly_score": 0.8682071566581726,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, unique_currencies, burst_score",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 53.0,
+      "amt_mean": 28602.4531,
+      "amt_std": 130488.625,
+      "amt_max": 959200.375,
+      "cross_border_ratio": 0.0566,
+      "currency_mismatch_rate": 0.0943,
+      "fan_out_ratio": 0.4717,
+      "tx_per_day": 0.6543
+    },
+    "graph_features": {
+      "out_degree": 25.0,
+      "in_degree": 2.0,
+      "pagerank": 1e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "2117738647",
+      "2280598726",
+      "1555214216",
+      "6656187251",
+      "9494777548",
+      "8173062716",
+      "7574841994",
+      "8263352425",
+      "6513792083",
+      "9788404560"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "4574851353",
+        "to": "6057192541",
+        "amount": 3699.139892578125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-12 00:00:00",
+        "from": "4574851353",
+        "to": "6141540526",
+        "amount": 4138.5,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-22 00:00:00",
+        "from": "4574851353",
+        "to": "1555214216",
+        "amount": 6075.669921875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "4574851353",
+        "to": "7421660932",
+        "amount": 13186.9296875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-22 00:00:00",
+        "from": "4574851353",
+        "to": "6057192541",
+        "amount": 5169.39990234375,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4574851353 exhibited multi-currency layering indicators: 53 transactions with a currency mismatch rate of 9.4% and a cross-border ratio of 5.7%. Network analysis identified the account as a node in a 27-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.868. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 2117738647, 2280598726, 1555214216, 6656187251, 9494777548."
+  },
+  {
+    "timestamp": "2026-02-19T14:58:55.752861Z",
+    "account_id": "6601473562",
+    "anomaly_score": 0.8635262250900269,
+    "rule_score": 1,
+    "typology": "Rapid Movement / Velocity",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "betweenness, tx_per_day, pagerank",
+    "rule_triggers": "Velocity >20 txns/day: rapid transaction cadence",
+    "statistical_features": {
+      "tx_count": 38.0,
+      "amt_mean": 10188.8945,
+      "amt_std": 7787.7744,
+      "amt_max": 35209.0195,
+      "cross_border_ratio": 0.0526,
+      "currency_mismatch_rate": 0.0526,
+      "fan_out_ratio": 0.4737,
+      "tx_per_day": 38.0
+    },
+    "graph_features": {
+      "out_degree": 18.0,
+      "in_degree": 20.0,
+      "pagerank": 7.2e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "8968834368",
+      "4323298844",
+      "7756122616",
+      "5435251086",
+      "6106388738",
+      "4308782541",
+      "8338881553",
+      "3820414191",
+      "4262929242",
+      "4548707055"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-11-09 00:00:00",
+        "from": "3820414191",
+        "to": "6601473562",
+        "amount": 1075.3800048828125,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-11-07 00:00:00",
+        "from": "6532150294",
+        "to": "6601473562",
+        "amount": 999.489990234375,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-11-25 00:00:00",
+        "from": "838812559",
+        "to": "6601473562",
+        "amount": 13699.830078125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-25 00:00:00",
+        "from": "3570762447",
+        "to": "6601473562",
+        "amount": 5620.41015625,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-24 00:00:00",
+        "from": "6601473562",
+        "to": "8433844600",
+        "amount": 4392.43994140625,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 6601473562 conducted transactions at a velocity of 38.0 transactions per day, significantly above peer norms, with a burst score of 0.76. The rapid movement of funds across 18 counterparties is consistent with velocity-based placement or extraction. Anomaly score: 0.864. Rule triggers: Velocity >20 txns/day: rapid transaction cadence. Linked accounts identified: 8968834368, 4323298844, 7756122616, 5435251086, 6106388738."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:01.597653Z",
+    "account_id": "4097215471",
+    "anomaly_score": 0.8507946729660034,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, amt_cv, burst_score",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 49.0,
+      "amt_mean": 27299.3652,
+      "amt_std": 138159.2188,
+      "amt_max": 974184.0625,
+      "cross_border_ratio": 0.1429,
+      "currency_mismatch_rate": 0.1633,
+      "fan_out_ratio": 0.5306,
+      "tx_per_day": 0.6712
+    },
+    "graph_features": {
+      "out_degree": 26.0,
+      "in_degree": 0.0,
+      "pagerank": 3e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "2132543185",
+      "7121452437",
+      "679386056",
+      "2048443374",
+      "1063527736",
+      "5445074987",
+      "5060917753",
+      "8719189521",
+      "1375795191",
+      "6266937475"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "4097215471",
+        "to": "7121452437",
+        "amount": 3815.39990234375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-18 00:00:00",
+        "from": "4097215471",
+        "to": "7444870185",
+        "amount": 4651.56005859375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "4097215471",
+        "to": "9406568932",
+        "amount": 433.0799865722656,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-01 00:00:00",
+        "from": "4097215471",
+        "to": "679386056",
+        "amount": 6293.990234375,
+        "currency": "US dollar",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-01 00:00:00",
+        "from": "4097215471",
+        "to": "8163549538",
+        "amount": 7795.64990234375,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4097215471 exhibited multi-currency layering indicators: 49 transactions with a currency mismatch rate of 16.3% and a cross-border ratio of 14.3%. Network analysis identified the account as a node in a 26-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.851. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 2132543185, 7121452437, 679386056, 2048443374, 1063527736."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:06.484869Z",
+    "account_id": "1842877204",
+    "anomaly_score": 0.8500930070877075,
+    "rule_score": 4,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "unique_currencies, tx_count, burst_score",
+    "rule_triggers": "Cross-border ratio >80%: potential geographic dispersion; Currency mismatch >50%: potential conversion layering; Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 53.0,
+      "amt_mean": 13913.6768,
+      "amt_std": 44134.8594,
+      "amt_max": 328056.1562,
+      "cross_border_ratio": 0.8679,
+      "currency_mismatch_rate": 0.8679,
+      "fan_out_ratio": 0.4717,
+      "tx_per_day": 0.7571
+    },
+    "graph_features": {
+      "out_degree": 25.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "9130910820",
+      "8654653684",
+      "3644257018",
+      "7563604369",
+      "6711613308",
+      "3635655222",
+      "5174658006",
+      "9835038654",
+      "9408286648",
+      "5333210318"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-13 00:00:00",
+        "from": "1842877204",
+        "to": "4880456997",
+        "amount": 7710.77001953125,
+        "currency": "Euro",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-13 00:00:00",
+        "from": "1842877204",
+        "to": "7985627079",
+        "amount": 9593.98046875,
+        "currency": "Euro",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-13 00:00:00",
+        "from": "1842877204",
+        "to": "7563604369",
+        "amount": 10922.9404296875,
+        "currency": "Euro",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-13 00:00:00",
+        "from": "1842877204",
+        "to": "9130910820",
+        "amount": 8683.6103515625,
+        "currency": "Euro",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-13 00:00:00",
+        "from": "1842877204",
+        "to": "7563604369",
+        "amount": 11138.990234375,
+        "currency": "Euro",
+        "type": "Cross-border"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 1842877204 exhibited multi-currency layering indicators: 53 transactions with a currency mismatch rate of 86.8% and a cross-border ratio of 86.8%. Network analysis identified the account as a node in a 26-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.850. Rule triggers: Cross-border ratio >80%: potential geographic dispersion; Currency mismatch >50%: potential conversion layering; Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 9130910820, 8654653684, 3644257018, 7563604369, 6711613308."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:10.982809Z",
+    "account_id": "5057689301",
+    "anomaly_score": 0.8477322459220886,
+    "rule_score": 1,
+    "typology": "Unclassified",
+    "typology_confidence": 0.0,
+    "top_anomaly_features": "amt_mean, amt_max, pagerank",
+    "rule_triggers": "Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 1.0,
+      "amt_mean": 6213931.5,
+      "amt_std": 0.0,
+      "amt_max": 6213931.5,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0,
+      "fan_out_ratio": 1.0,
+      "tx_per_day": 1.0
+    },
+    "graph_features": {
+      "out_degree": 1.0,
+      "in_degree": 12.0,
+      "pagerank": 4.5e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "5879781721",
+      "5143438806",
+      "6137356985",
+      "8214265113",
+      "3267846600",
+      "4153752328",
+      "2500064638",
+      "824550806",
+      "9050842791",
+      "5033262977"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-12 00:00:00",
+        "from": "5057689301",
+        "to": "3267846600",
+        "amount": 6213931.5,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-15 00:00:00",
+        "from": "8743987304",
+        "to": "5057689301",
+        "amount": 14260.259765625,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-15 00:00:00",
+        "from": "4153752328",
+        "to": "5057689301",
+        "amount": 10523.8701171875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-15 00:00:00",
+        "from": "4153752328",
+        "to": "5057689301",
+        "amount": 10395.5,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-11-15 00:00:00",
+        "from": "5143438806",
+        "to": "5057689301",
+        "amount": 12345.3701171875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 5057689301 was flagged by the AML detection system with an anomaly score of 0.848. While no dominant typology was conclusively matched, the following rule violations were recorded: Single transaction >$100k: large value movement. Manual review is recommended to determine SAR eligibility. Linked accounts identified: 5879781721, 5143438806, 6137356985, 8214265113, 3267846600."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:13.776105Z",
+    "account_id": "3889140185",
+    "anomaly_score": 0.8452721834182739,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 46.0,
+      "amt_mean": 24732.2637,
+      "amt_std": 105162.4531,
+      "amt_max": 720974.5625,
+      "cross_border_ratio": 0.1087,
+      "currency_mismatch_rate": 0.1304,
+      "fan_out_ratio": 0.587,
+      "tx_per_day": 0.561
+    },
+    "graph_features": {
+      "out_degree": 27.0,
+      "in_degree": 12.0,
+      "pagerank": 4.5e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "4215364817",
+      "6950367499",
+      "7795429366",
+      "2377097714",
+      "8310003889",
+      "9729513987",
+      "8643969153",
+      "2008519630",
+      "183613617",
+      "8186937816"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "3889140185",
+        "to": "5472248254",
+        "amount": 9238.1904296875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "3889140185",
+        "to": "305692726",
+        "amount": 13035.8203125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-22 00:00:00",
+        "from": "3889140185",
+        "to": "545227075",
+        "amount": 4717.7099609375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "3889140185",
+        "to": "9469351368",
+        "amount": 1321.18994140625,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-24 00:00:00",
+        "from": "3889140185",
+        "to": "3213252659",
+        "amount": 3208.919921875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 3889140185 exhibited multi-currency layering indicators: 46 transactions with a currency mismatch rate of 13.0% and a cross-border ratio of 10.9%. Network analysis identified the account as a node in a 39-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.845. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 4215364817, 6950367499, 7795429366, 2377097714, 8310003889."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:17.375326Z",
+    "account_id": "9126482714",
+    "anomaly_score": 0.8415055871009827,
+    "rule_score": 1,
+    "typology": "Unclassified",
+    "typology_confidence": 0.0,
+    "top_anomaly_features": "amt_std, amt_max, amt_mean",
+    "rule_triggers": "Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 2.0,
+      "amt_mean": 2381314.5,
+      "amt_std": 3334390.25,
+      "amt_max": 4739084.5,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0,
+      "fan_out_ratio": 1.0,
+      "tx_per_day": 0.0357
+    },
+    "graph_features": {
+      "out_degree": 2.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "254333209",
+      "5256260951",
+      "6569397251",
+      "1075524474"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-12-21 00:00:00",
+        "from": "9126482714",
+        "to": "254333209",
+        "amount": 4739084.5,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-12-28 00:00:00",
+        "from": "1075524474",
+        "to": "9126482714",
+        "amount": 9939368.0,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-26 00:00:00",
+        "from": "9126482714",
+        "to": "6569397251",
+        "amount": 23544.7109375,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 9126482714 was flagged by the AML detection system with an anomaly score of 0.842. While no dominant typology was conclusively matched, the following rule violations were recorded: Single transaction >$100k: large value movement. Manual review is recommended to determine SAR eligibility. Linked accounts identified: 254333209, 5256260951, 6569397251, 1075524474."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:21.176425Z",
+    "account_id": "8561558553",
+    "anomaly_score": 0.8383325934410095,
+    "rule_score": 1,
+    "typology": "Unclassified",
+    "typology_confidence": 0.0,
+    "top_anomaly_features": "amt_mean, amt_max, fan_out_ratio",
+    "rule_triggers": "Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 1.0,
+      "amt_mean": 9348125.0,
+      "amt_std": 0.0,
+      "amt_max": 9348125.0,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0,
+      "fan_out_ratio": 1.0,
+      "tx_per_day": 1.0
+    },
+    "graph_features": {
+      "out_degree": 1.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "3990508657",
+      "6498511324",
+      "5912580944",
+      "8719445549"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-11-13 00:00:00",
+        "from": "8561558553",
+        "to": "6498511324",
+        "amount": 9348125.0,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-04 00:00:00",
+        "from": "8719445549",
+        "to": "8561558553",
+        "amount": 1119.93994140625,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 8561558553 was flagged by the AML detection system with an anomaly score of 0.838. While no dominant typology was conclusively matched, the following rule violations were recorded: Single transaction >$100k: large value movement. Manual review is recommended to determine SAR eligibility. Linked accounts identified: 3990508657, 6498511324, 5912580944, 8719445549."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:24.892993Z",
+    "account_id": "4078401508",
+    "anomaly_score": 0.8367274403572083,
+    "rule_score": 3,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "tx_count, out_degree, unique_receivers",
+    "rule_triggers": "Currency mismatch >50%: potential conversion layering; Mean amount <$10k & count >30: possible structuring; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 60.0,
+      "amt_mean": 9971.0605,
+      "amt_std": 20970.7578,
+      "amt_max": 166188.0156,
+      "cross_border_ratio": 0.7167,
+      "currency_mismatch_rate": 0.6667,
+      "fan_out_ratio": 0.5333,
+      "tx_per_day": 0.7407
+    },
+    "graph_features": {
+      "out_degree": 32.0,
+      "in_degree": 3.0,
+      "pagerank": 1.3e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "2536093529",
+      "3696653215",
+      "3406863243",
+      "1259515006",
+      "7229904514",
+      "8978957670",
+      "7488004965",
+      "6039399881",
+      "8771533285",
+      "6028238448"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-13 00:00:00",
+        "from": "4078401508",
+        "to": "2537353145",
+        "amount": 5415.02001953125,
+        "currency": "Euro",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-15 00:00:00",
+        "from": "4078401508",
+        "to": "7424519689",
+        "amount": 10208.9599609375,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-08 00:00:00",
+        "from": "4078401508",
+        "to": "7488004965",
+        "amount": 4911.58984375,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-17 00:00:00",
+        "from": "4078401508",
+        "to": "4991802250",
+        "amount": 1161.22998046875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-16 00:00:00",
+        "from": "4078401508",
+        "to": "2537353145",
+        "amount": 15743.08984375,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4078401508 exhibited multi-currency layering indicators: 60 transactions with a currency mismatch rate of 66.7% and a cross-border ratio of 71.7%. Network analysis identified the account as a node in a 35-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.837. Rule triggers: Currency mismatch >50%: potential conversion layering; Mean amount <$10k & count >30: possible structuring; Single transaction >$100k: large value movement. Linked accounts identified: 2536093529, 3696653215, 3406863243, 1259515006, 7229904514."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:29.656675Z",
+    "account_id": "7293699462",
+    "anomaly_score": 0.8339993357658386,
+    "rule_score": 3,
+    "typology": "Structuring / Smurfing",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "tx_count, out_degree, unique_receivers",
+    "rule_triggers": "Currency mismatch >50%: potential conversion layering; Mean amount <$10k & count >30: possible structuring; Part of a transaction cycle: round-trip indicator",
+    "statistical_features": {
+      "tx_count": 65.0,
+      "amt_mean": 8504.0576,
+      "amt_std": 5094.2061,
+      "amt_max": 25414.0,
+      "cross_border_ratio": 0.7846,
+      "currency_mismatch_rate": 0.7846,
+      "fan_out_ratio": 0.5077,
+      "tx_per_day": 0.8442
+    },
+    "graph_features": {
+      "out_degree": 33.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "40738592",
+      "6658792833",
+      "4807178744",
+      "9789914613",
+      "227599717",
+      "467327720",
+      "9357992723",
+      "2068756953",
+      "6876140815",
+      "3180127804"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-07 00:00:00",
+        "from": "7293699462",
+        "to": "9303564168",
+        "amount": 917.7100219726562,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-13 00:00:00",
+        "from": "7293699462",
+        "to": "6876140815",
+        "amount": 10880.26953125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-09 00:00:00",
+        "from": "7293699462",
+        "to": "6658792833",
+        "amount": 3041.550048828125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-15 00:00:00",
+        "from": "7293699462",
+        "to": "3294243639",
+        "amount": 19308.759765625,
+        "currency": "UK pounds",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "7293699462",
+        "to": "7522132287",
+        "amount": 25414.0,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 7293699462 conducted 65 transactions with a mean value of $8,504.06, consistently below reporting thresholds, across 33 unique counterparties over the review period. The observed fan-out ratio of 0.51 and geographic dispersion (cross-border ratio 78.5%) are consistent with structuring or smurfing activity. The isolation forest anomaly score of 0.834 indicates statistically atypical behaviour relative to peer accounts. Rule triggers: Currency mismatch >50%: potential conversion layering; Mean amount <$10k & count >30: possible structuring; Part of a transaction cycle: round-trip indicator. Linked accounts identified: 40738592, 6658792833, 4807178744, 9789914613, 227599717."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:33.961417Z",
+    "account_id": "4569765453",
+    "anomaly_score": 0.8338568210601807,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 47.0,
+      "amt_mean": 26321.793,
+      "amt_std": 126578.75,
+      "amt_max": 875082.0625,
+      "cross_border_ratio": 0.0851,
+      "currency_mismatch_rate": 0.0851,
+      "fan_out_ratio": 0.617,
+      "tx_per_day": 0.5949
+    },
+    "graph_features": {
+      "out_degree": 29.0,
+      "in_degree": 0.0,
+      "pagerank": 3e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "6031003232",
+      "9933991171",
+      "9225582901",
+      "7013423800",
+      "7678923334",
+      "3875756943",
+      "2350551249",
+      "9201160754",
+      "1091464508",
+      "5765633237"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-09 00:00:00",
+        "from": "4569765453",
+        "to": "315465322",
+        "amount": 455.32000732421875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-13 00:00:00",
+        "from": "4569765453",
+        "to": "3875756943",
+        "amount": 3551.77001953125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "4569765453",
+        "to": "5765633237",
+        "amount": 7217.009765625,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "4569765453",
+        "to": "9225582901",
+        "amount": 742.1300048828125,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-11-02 00:00:00",
+        "from": "4569765453",
+        "to": "2237846849",
+        "amount": 1024.72998046875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4569765453 exhibited multi-currency layering indicators: 47 transactions with a currency mismatch rate of 8.5% and a cross-border ratio of 8.5%. Network analysis identified the account as a node in a 29-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.834. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 6031003232, 9933991171, 9225582901, 7013423800, 7678923334."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:38.922179Z",
+    "account_id": "9835154318",
+    "anomaly_score": 0.8164351582527161,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 35.0,
+      "amt_mean": 29921.6348,
+      "amt_std": 136063.3594,
+      "amt_max": 811558.25,
+      "cross_border_ratio": 0.0571,
+      "currency_mismatch_rate": 0.0571,
+      "fan_out_ratio": 0.6286,
+      "tx_per_day": 0.4118
+    },
+    "graph_features": {
+      "out_degree": 22.0,
+      "in_degree": 14.0,
+      "pagerank": 5.2e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "3883753608",
+      "919383294",
+      "3089930061",
+      "3814476717",
+      "958853582",
+      "4849751980",
+      "7641166422",
+      "2009127359",
+      "3622165731",
+      "5862789471"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "9835154318",
+        "to": "7174050243",
+        "amount": 51.63999938964844,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-07 00:00:00",
+        "from": "9835154318",
+        "to": "8472396794",
+        "amount": 1037.9100341796875,
+        "currency": "UK pounds",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-20 00:00:00",
+        "from": "1098161707",
+        "to": "9835154318",
+        "amount": 641.52001953125,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-10-22 00:00:00",
+        "from": "9835154318",
+        "to": "958853582",
+        "amount": 13886.2998046875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-10 00:00:00",
+        "from": "9835154318",
+        "to": "7593940866",
+        "amount": 3276.81005859375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 9835154318 exhibited multi-currency layering indicators: 35 transactions with a currency mismatch rate of 5.7% and a cross-border ratio of 5.7%. Network analysis identified the account as a node in a 36-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.816. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 3883753608, 919383294, 3089930061, 3814476717, 958853582."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:43.604674Z",
+    "account_id": "2295019842",
+    "anomaly_score": 0.8161064982414246,
+    "rule_score": 1,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "tx_count, out_degree, unique_receivers",
+    "rule_triggers": "Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 69.0,
+      "amt_mean": 13745.5078,
+      "amt_std": 37887.6055,
+      "amt_max": 308781.0,
+      "cross_border_ratio": 0.058,
+      "currency_mismatch_rate": 0.058,
+      "fan_out_ratio": 0.4928,
+      "tx_per_day": 0.8734
+    },
+    "graph_features": {
+      "out_degree": 34.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "5393441083",
+      "2277132284",
+      "3796951585",
+      "2443440307",
+      "8366637386",
+      "7073464739",
+      "4982454506",
+      "6600832613",
+      "836936432",
+      "7500162757"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-08 00:00:00",
+        "from": "2295019842",
+        "to": "1605900638",
+        "amount": 1186.010009765625,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-12 00:00:00",
+        "from": "2295019842",
+        "to": "3085887217",
+        "amount": 15620.3896484375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "2295019842",
+        "to": "444927496",
+        "amount": 29842.7890625,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "2295019842",
+        "to": "4411670645",
+        "amount": 7754.14013671875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "2295019842",
+        "to": "521735248",
+        "amount": 5801.60986328125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 2295019842 exhibited multi-currency layering indicators: 69 transactions with a currency mismatch rate of 5.8% and a cross-border ratio of 5.8%. Network analysis identified the account as a node in a 35-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.816. Rule triggers: Single transaction >$100k: large value movement. Linked accounts identified: 5393441083, 2277132284, 3796951585, 2443440307, 8366637386."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:48.058372Z",
+    "account_id": "6498511324",
+    "anomaly_score": 0.8148308396339417,
+    "rule_score": 1,
+    "typology": "Unclassified",
+    "typology_confidence": 0.0,
+    "top_anomaly_features": "amt_std, amt_max, amt_mean",
+    "rule_triggers": "Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 2.0,
+      "amt_mean": 2120442.0,
+      "amt_std": 2998451.75,
+      "amt_max": 4240667.5,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0,
+      "fan_out_ratio": 1.0,
+      "tx_per_day": 0.0455
+    },
+    "graph_features": {
+      "out_degree": 2.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "8561558553",
+      "3990508657",
+      "9183379400",
+      "902127894",
+      "8719445549",
+      "7633303920",
+      "9000336600",
+      "1872942150",
+      "7372198746",
+      "4367887591"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-11-09 00:00:00",
+        "from": "6498511324",
+        "to": "3990508657",
+        "amount": 4240667.5,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-13 00:00:00",
+        "from": "8561558553",
+        "to": "6498511324",
+        "amount": 9348125.0,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-12-22 00:00:00",
+        "from": "6498511324",
+        "to": "5912580944",
+        "amount": 216.38999938964844,
+        "currency": "UK pounds",
+        "type": "Cash Withdrawal"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 6498511324 was flagged by the AML detection system with an anomaly score of 0.815. While no dominant typology was conclusively matched, the following rule violations were recorded: Single transaction >$100k: large value movement. Manual review is recommended to determine SAR eligibility. Linked accounts identified: 8561558553, 3990508657, 9183379400, 902127894, 8719445549."
+  },
+  {
+    "timestamp": "2026-02-19T14:59:54.201868Z",
+    "account_id": "7754173980",
+    "anomaly_score": 0.8125180006027222,
+    "rule_score": 2,
+    "typology": "Round-Tripping",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "pagerank, in_degree, total_degree",
+    "rule_triggers": "Mean amount <$10k & count >30: possible structuring; Part of a transaction cycle: round-trip indicator",
+    "statistical_features": {
+      "tx_count": 50.0,
+      "amt_mean": 9483.8135,
+      "amt_std": 6602.6357,
+      "amt_max": 28370.8496,
+      "cross_border_ratio": 0.16,
+      "currency_mismatch_rate": 0.16,
+      "fan_out_ratio": 0.52,
+      "tx_per_day": 1.0
+    },
+    "graph_features": {
+      "out_degree": 26.0,
+      "in_degree": 21.0,
+      "pagerank": 7.6e-05,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "9250873609",
+      "6919516032",
+      "1498143860",
+      "8266727671",
+      "2055333295",
+      "383855698",
+      "5690840035",
+      "5263552135",
+      "5885140606",
+      "7725502310"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-07 00:00:00",
+        "from": "5885140606",
+        "to": "7754173980",
+        "amount": 2303.489990234375,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-10-20 00:00:00",
+        "from": "6919516032",
+        "to": "7754173980",
+        "amount": 917.1799926757812,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "5292014639",
+        "to": "7754173980",
+        "amount": 26857.26953125,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-11-03 00:00:00",
+        "from": "8967582079",
+        "to": "7754173980",
+        "amount": 18857.33984375,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-03 00:00:00",
+        "from": "8967582079",
+        "to": "7754173980",
+        "amount": 18736.220703125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 7754173980 is embedded within a detected transaction cycle (strongly connected component), a classic indicator of round-tripping. The account processed 50 transactions totalling approximately $28,371 (peak single transaction). The cyclic flow pattern combined with an anomaly score of 0.813 warrants further investigation. Rule triggers: Mean amount <$10k & count >30: possible structuring; Part of a transaction cycle: round-trip indicator. Linked accounts identified: 9250873609, 6919516032, 1498143860, 8266727671, 2055333295."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:00.301236Z",
+    "account_id": "2083030200",
+    "anomaly_score": 0.8125146627426147,
+    "rule_score": 3,
+    "typology": "Round-Tripping",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 33.0,
+      "amt_mean": 28756.627,
+      "amt_std": 111988.3906,
+      "amt_max": 649692.6875,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0303,
+      "fan_out_ratio": 0.6061,
+      "tx_per_day": 0.4342
+    },
+    "graph_features": {
+      "out_degree": 20.0,
+      "in_degree": 13.0,
+      "pagerank": 4.8e-05,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "119845310",
+      "9901680490",
+      "8679419309",
+      "3306254001",
+      "9356924390",
+      "3340141212",
+      "7345354376",
+      "4052063864",
+      "2065453731",
+      "7727117067"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-15 00:00:00",
+        "from": "2083030200",
+        "to": "8679419309",
+        "amount": 546.9600219726562,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "2083030200",
+        "to": "2964242356",
+        "amount": 3473.800048828125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-18 00:00:00",
+        "from": "2083030200",
+        "to": "8616013222",
+        "amount": 334.2099914550781,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "2083030200",
+        "to": "2964242356",
+        "amount": 3469.47998046875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-26 00:00:00",
+        "from": "2083030200",
+        "to": "1006031926",
+        "amount": 586.2899780273438,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 2083030200 is embedded within a detected transaction cycle (strongly connected component), a classic indicator of round-tripping. The account processed 33 transactions totalling approximately $649,693 (peak single transaction). The cyclic flow pattern combined with an anomaly score of 0.813 warrants further investigation. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement. Linked accounts identified: 119845310, 9901680490, 8679419309, 3306254001, 9356924390."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:05.929132Z",
+    "account_id": "6244816208",
+    "anomaly_score": 0.8108738660812378,
+    "rule_score": 3,
+    "typology": "Round-Tripping",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "amt_max, pagerank, in_degree",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 14.0,
+      "amt_mean": 54901.9883,
+      "amt_std": 196941.1719,
+      "amt_max": 739133.25,
+      "cross_border_ratio": 0.1429,
+      "currency_mismatch_rate": 0.2143,
+      "fan_out_ratio": 0.7857,
+      "tx_per_day": 0.2295
+    },
+    "graph_features": {
+      "out_degree": 11.0,
+      "in_degree": 17.0,
+      "pagerank": 6.2e-05,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "3713262329",
+      "2169113724",
+      "6180047158",
+      "9441881558",
+      "4978147175",
+      "862425497",
+      "9816442772",
+      "2517279477",
+      "1477759902",
+      "6699315150"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "6244816208",
+        "to": "3713262329",
+        "amount": 2503.1298828125,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-31 00:00:00",
+        "from": "6244816208",
+        "to": "8224224002",
+        "amount": 739133.25,
+        "currency": "US dollar",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-11-01 00:00:00",
+        "from": "4562534545",
+        "to": "6244816208",
+        "amount": 4409.89990234375,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-10-31 00:00:00",
+        "from": "6244816208",
+        "to": "862425497",
+        "amount": 1125.97998046875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-29 00:00:00",
+        "from": "6244816208",
+        "to": "3696863792",
+        "amount": 3268.72998046875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 6244816208 is embedded within a detected transaction cycle (strongly connected component), a classic indicator of round-tripping. The account processed 14 transactions totalling approximately $739,133 (peak single transaction). The cyclic flow pattern combined with an anomaly score of 0.811 warrants further investigation. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement. Linked accounts identified: 3713262329, 2169113724, 6180047158, 9441881558, 4978147175."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:10.694506Z",
+    "account_id": "6314683838",
+    "anomaly_score": 0.8077706694602966,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "unique_currencies, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 30.0,
+      "amt_mean": 22204.5488,
+      "amt_std": 86098.7031,
+      "amt_max": 477347.7812,
+      "cross_border_ratio": 0.4667,
+      "currency_mismatch_rate": 0.5,
+      "fan_out_ratio": 0.6333,
+      "tx_per_day": 0.3704
+    },
+    "graph_features": {
+      "out_degree": 19.0,
+      "in_degree": 8.0,
+      "pagerank": 3.1e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "1485588621",
+      "2317986640",
+      "3848861547",
+      "7381260309",
+      "1911863985",
+      "6905578049",
+      "1283176527",
+      "1849314416",
+      "3722238804",
+      "3174873944"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "6314683838",
+        "to": "2317986640",
+        "amount": 8758.330078125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "6314683838",
+        "to": "4814732347",
+        "amount": 4526.259765625,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "6314683838",
+        "to": "2773740220",
+        "amount": 4844.27001953125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "6314683838",
+        "to": "2773740220",
+        "amount": 4840.22998046875,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "6314683838",
+        "to": "7381260309",
+        "amount": 5110.64990234375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 6314683838 exhibited multi-currency layering indicators: 30 transactions with a currency mismatch rate of 50.0% and a cross-border ratio of 46.7%. Network analysis identified the account as a node in a 27-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.808. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 1485588621, 2317986640, 3848861547, 7381260309, 1911863985."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:14.835259Z",
+    "account_id": "7692499899",
+    "anomaly_score": 0.79906165599823,
+    "rule_score": 2,
+    "typology": "Round-Tripping",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "betweenness, tx_count, unique_receivers",
+    "rule_triggers": "Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 47.0,
+      "amt_mean": 13169.3047,
+      "amt_std": 20556.6641,
+      "amt_max": 145690.625,
+      "cross_border_ratio": 0.1064,
+      "currency_mismatch_rate": 0.1064,
+      "fan_out_ratio": 0.4681,
+      "tx_per_day": 0.7705
+    },
+    "graph_features": {
+      "out_degree": 22.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "4654036210",
+      "5537515976",
+      "9875346918",
+      "1314527526",
+      "1898090669",
+      "2212632560",
+      "9592732336",
+      "3685544195",
+      "7797007623",
+      "5864062897"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-16 00:00:00",
+        "from": "7692499899",
+        "to": "2212632560",
+        "amount": 6711.35986328125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-16 00:00:00",
+        "from": "7692499899",
+        "to": "1898090669",
+        "amount": 5420.52001953125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-16 00:00:00",
+        "from": "7692499899",
+        "to": "3685544195",
+        "amount": 13733.8896484375,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-16 00:00:00",
+        "from": "7692499899",
+        "to": "8040775446",
+        "amount": 8275.3095703125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-16 00:00:00",
+        "from": "7692499899",
+        "to": "5150568286",
+        "amount": 9252.4599609375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 7692499899 is embedded within a detected transaction cycle (strongly connected component), a classic indicator of round-tripping. The account processed 47 transactions totalling approximately $145,691 (peak single transaction). The cyclic flow pattern combined with an anomaly score of 0.799 warrants further investigation. Rule triggers: Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement. Linked accounts identified: 4654036210, 5537515976, 9875346918, 1314527526, 1898090669."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:22.639601Z",
+    "account_id": "5693685059",
+    "anomaly_score": 0.7964566349983215,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 32.0,
+      "amt_mean": 38032.9961,
+      "amt_std": 166736.375,
+      "amt_max": 951157.75,
+      "cross_border_ratio": 0.0625,
+      "currency_mismatch_rate": 0.0625,
+      "fan_out_ratio": 0.5625,
+      "tx_per_day": 0.5246
+    },
+    "graph_features": {
+      "out_degree": 18.0,
+      "in_degree": 14.0,
+      "pagerank": 5.2e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "9967570065",
+      "6104171532",
+      "5503095231",
+      "8065224575",
+      "5470705292",
+      "9586495318",
+      "2231211285",
+      "7802634187",
+      "9871221817",
+      "7532113574"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-15 00:00:00",
+        "from": "5693685059",
+        "to": "4180093198",
+        "amount": 243.64999389648438,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-31 00:00:00",
+        "from": "5693685059",
+        "to": "1803890492",
+        "amount": 474.4599914550781,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-27 00:00:00",
+        "from": "5693685059",
+        "to": "2231211285",
+        "amount": 3424.989990234375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-11-02 00:00:00",
+        "from": "5693685059",
+        "to": "2231211285",
+        "amount": 2194.97998046875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-18 00:00:00",
+        "from": "1714295063",
+        "to": "5693685059",
+        "amount": 6010.14013671875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 5693685059 exhibited multi-currency layering indicators: 32 transactions with a currency mismatch rate of 6.2% and a cross-border ratio of 6.2%. Network analysis identified the account as a node in a 32-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.796. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 9967570065, 6104171532, 5503095231, 8065224575, 5470705292."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:29.571767Z",
+    "account_id": "6369930130",
+    "anomaly_score": 0.7919036746025085,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "unique_currencies, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 48.0,
+      "amt_mean": 21370.9199,
+      "amt_std": 93573.5156,
+      "amt_max": 654969.1875,
+      "cross_border_ratio": 0.1875,
+      "currency_mismatch_rate": 0.25,
+      "fan_out_ratio": 0.4583,
+      "tx_per_day": 0.8727
+    },
+    "graph_features": {
+      "out_degree": 22.0,
+      "in_degree": 0.0,
+      "pagerank": 3e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "5572408338",
+      "5877162957",
+      "6518460908",
+      "6097131721",
+      "7535372711",
+      "4481627675",
+      "3419488041",
+      "4715823521",
+      "8441640987",
+      "1538285400"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-29 00:00:00",
+        "from": "6369930130",
+        "to": "8441640987",
+        "amount": 740.8400268554688,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-23 00:00:00",
+        "from": "6369930130",
+        "to": "5877162957",
+        "amount": 462.1400146484375,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-12-05 00:00:00",
+        "from": "6369930130",
+        "to": "8441640987",
+        "amount": 2087.110107421875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-28 00:00:00",
+        "from": "6369930130",
+        "to": "6230863018",
+        "amount": 5687.0498046875,
+        "currency": "UK pounds",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-12-06 00:00:00",
+        "from": "6369930130",
+        "to": "8441640987",
+        "amount": 392.0,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 6369930130 exhibited multi-currency layering indicators: 48 transactions with a currency mismatch rate of 25.0% and a cross-border ratio of 18.8%. Network analysis identified the account as a node in a 22-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.792. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 5572408338, 5877162957, 6518460908, 6097131721, 7535372711."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:36.092356Z",
+    "account_id": "3206942177",
+    "anomaly_score": 0.7898085117340088,
+    "rule_score": 0,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "betweenness, total_degree, pagerank",
+    "rule_triggers": "No rules triggered",
+    "statistical_features": {
+      "tx_count": 49.0,
+      "amt_mean": 10383.3281,
+      "amt_std": 10873.7832,
+      "amt_max": 52674.75,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0204,
+      "fan_out_ratio": 0.5714,
+      "tx_per_day": 0.5976
+    },
+    "graph_features": {
+      "out_degree": 28.0,
+      "in_degree": 16.0,
+      "pagerank": 5.8e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "630493092",
+      "944921501",
+      "3714257855",
+      "699058807",
+      "7508103282",
+      "5850913616",
+      "5421923623",
+      "2975136498",
+      "5706269471",
+      "9015079537"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-08 00:00:00",
+        "from": "3206942177",
+        "to": "9015079537",
+        "amount": 11733.400390625,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "630493092",
+        "to": "3206942177",
+        "amount": 2337.659912109375,
+        "currency": "Pakistani rupee",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-10-20 00:00:00",
+        "from": "3206942177",
+        "to": "8771937897",
+        "amount": 4171.06982421875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-24 00:00:00",
+        "from": "3887770164",
+        "to": "3206942177",
+        "amount": 9209.7900390625,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-24 00:00:00",
+        "from": "7508103282",
+        "to": "3206942177",
+        "amount": 10923.6396484375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 3206942177 exhibited multi-currency layering indicators: 49 transactions with a currency mismatch rate of 2.0% and a cross-border ratio of 0.0%. Network analysis identified the account as a node in a 44-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.790. Rule triggers: No rules triggered. Linked accounts identified: 630493092, 944921501, 3714257855, 699058807, 7508103282."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:43.645600Z",
+    "account_id": "3774143449",
+    "anomaly_score": 0.7850242257118225,
+    "rule_score": 1,
+    "typology": "Structuring / Smurfing",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "tx_count, unique_currencies, out_degree",
+    "rule_triggers": "Mean amount <$10k & count >30: possible structuring",
+    "statistical_features": {
+      "tx_count": 70.0,
+      "amt_mean": 6431.8389,
+      "amt_std": 4009.061,
+      "amt_max": 19943.6602,
+      "cross_border_ratio": 0.1714,
+      "currency_mismatch_rate": 0.2,
+      "fan_out_ratio": 0.4714,
+      "tx_per_day": 1.0938
+    },
+    "graph_features": {
+      "out_degree": 33.0,
+      "in_degree": 10.0,
+      "pagerank": 3.8e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "20993635",
+      "9424495785",
+      "7353923210",
+      "3055704493",
+      "1925895729",
+      "7231177752",
+      "4619709346",
+      "3056311205",
+      "6198249492",
+      "844748514"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "3774143449",
+        "to": "2887530767",
+        "amount": 2118.8701171875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-24 00:00:00",
+        "from": "3774143449",
+        "to": "3055704493",
+        "amount": 371.3900146484375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-20 00:00:00",
+        "from": "3774143449",
+        "to": "7982088518",
+        "amount": 2734.02001953125,
+        "currency": "UK pounds",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "3774143449",
+        "to": "2544641418",
+        "amount": 5586.4599609375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-25 00:00:00",
+        "from": "3774143449",
+        "to": "9755189526",
+        "amount": 6271.43994140625,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 3774143449 conducted 70 transactions with a mean value of $6,431.84, consistently below reporting thresholds, across 33 unique counterparties over the review period. The observed fan-out ratio of 0.47 and geographic dispersion (cross-border ratio 17.1%) are consistent with structuring or smurfing activity. The isolation forest anomaly score of 0.785 indicates statistically atypical behaviour relative to peer accounts. Rule triggers: Mean amount <$10k & count >30: possible structuring. Linked accounts identified: 20993635, 9424495785, 7353923210, 3055704493, 1925895729."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:52.058015Z",
+    "account_id": "3543407543",
+    "anomaly_score": 0.7843721508979797,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 36.0,
+      "amt_mean": 34680.0039,
+      "amt_std": 156855.3906,
+      "amt_max": 947961.4375,
+      "cross_border_ratio": 0.1111,
+      "currency_mismatch_rate": 0.1389,
+      "fan_out_ratio": 0.5833,
+      "tx_per_day": 0.5538
+    },
+    "graph_features": {
+      "out_degree": 21.0,
+      "in_degree": 6.0,
+      "pagerank": 2.4e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "9374900003",
+      "9583386830",
+      "2927666489",
+      "9211224759",
+      "7770253446",
+      "3363817179",
+      "2795190276",
+      "4713146431",
+      "6729894627",
+      "4781131832"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-09 00:00:00",
+        "from": "3543407543",
+        "to": "4663117896",
+        "amount": 128.47999572753906,
+        "currency": "UK pounds",
+        "type": "Cash Withdrawal"
+      },
+      {
+        "date": "2022-10-18 00:00:00",
+        "from": "3543407543",
+        "to": "6278095476",
+        "amount": 4201.919921875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-05 00:00:00",
+        "from": "3543407543",
+        "to": "5003340653",
+        "amount": 11548.150390625,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-06 00:00:00",
+        "from": "3543407543",
+        "to": "5878723292",
+        "amount": 9629.8896484375,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-06 00:00:00",
+        "from": "3543407543",
+        "to": "715386763",
+        "amount": 7669.35986328125,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 3543407543 exhibited multi-currency layering indicators: 36 transactions with a currency mismatch rate of 13.9% and a cross-border ratio of 11.1%. Network analysis identified the account as a node in a 27-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.784. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 9374900003, 9583386830, 2927666489, 9211224759, 7770253446."
+  },
+  {
+    "timestamp": "2026-02-19T15:00:59.683873Z",
+    "account_id": "2138890430",
+    "anomaly_score": 0.7823523283004761,
+    "rule_score": 1,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "total_degree, pagerank, in_degree",
+    "rule_triggers": "Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 54.0,
+      "amt_mean": 10974.5088,
+      "amt_std": 25211.25,
+      "amt_max": 184043.5156,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0556,
+      "fan_out_ratio": 0.5185,
+      "tx_per_day": 0.675
+    },
+    "graph_features": {
+      "out_degree": 28.0,
+      "in_degree": 18.0,
+      "pagerank": 6.5e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "5630565000",
+      "868476793",
+      "5359168469",
+      "1866552695",
+      "5528254960",
+      "4061943290",
+      "7899212933",
+      "6538151084",
+      "4554631429",
+      "6423140484"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-12 00:00:00",
+        "from": "2138890430",
+        "to": "4830073039",
+        "amount": 1550.699951171875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-14 00:00:00",
+        "from": "583715991",
+        "to": "2138890430",
+        "amount": 287.3599853515625,
+        "currency": "UK pounds",
+        "type": "Cash Deposit"
+      },
+      {
+        "date": "2022-10-17 00:00:00",
+        "from": "2138890430",
+        "to": "2736962635",
+        "amount": 9667.740234375,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-17 00:00:00",
+        "from": "2138890430",
+        "to": "5134557117",
+        "amount": 6623.580078125,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-17 00:00:00",
+        "from": "2138890430",
+        "to": "3041174126",
+        "amount": 6026.60009765625,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 2138890430 exhibited multi-currency layering indicators: 54 transactions with a currency mismatch rate of 5.6% and a cross-border ratio of 0.0%. Network analysis identified the account as a node in a 46-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.782. Rule triggers: Single transaction >$100k: large value movement. Linked accounts identified: 5630565000, 868476793, 5359168469, 1866552695, 5528254960."
+  },
+  {
+    "timestamp": "2026-02-19T15:01:06.099748Z",
+    "account_id": "7960875619",
+    "anomaly_score": 0.7760565876960754,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 32.0,
+      "amt_mean": 37423.2422,
+      "amt_std": 163977.75,
+      "amt_max": 935701.0,
+      "cross_border_ratio": 0.0938,
+      "currency_mismatch_rate": 0.125,
+      "fan_out_ratio": 0.5,
+      "tx_per_day": 0.4776
+    },
+    "graph_features": {
+      "out_degree": 16.0,
+      "in_degree": 10.0,
+      "pagerank": 3.8e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "4378513487",
+      "9833422045",
+      "9802157588",
+      "9370123177",
+      "5616249611",
+      "9000074618",
+      "6741025384",
+      "1696893277",
+      "5182503799",
+      "4639847591"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "7960875619",
+        "to": "9613477408",
+        "amount": 10205.41015625,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-04 00:00:00",
+        "from": "7960875619",
+        "to": "5616249611",
+        "amount": 2850.489990234375,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-18 00:00:00",
+        "from": "7960875619",
+        "to": "9802157588",
+        "amount": 246.77999877929688,
+        "currency": "Pakistani rupee",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-26 00:00:00",
+        "from": "7960875619",
+        "to": "9833422045",
+        "amount": 7815.77978515625,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-26 00:00:00",
+        "from": "7960875619",
+        "to": "1259901097",
+        "amount": 4409.25,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 7960875619 exhibited multi-currency layering indicators: 32 transactions with a currency mismatch rate of 12.5% and a cross-border ratio of 9.4%. Network analysis identified the account as a node in a 26-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.776. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 4378513487, 9833422045, 9802157588, 9370123177, 5616249611."
+  },
+  {
+    "timestamp": "2026-02-19T15:01:12.355911Z",
+    "account_id": "4837452417",
+    "anomaly_score": 0.7699233889579773,
+    "rule_score": 3,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "unique_currencies, total_degree, in_cycle",
+    "rule_triggers": "Currency mismatch >50%: potential conversion layering; Mean amount <$10k & count >30: possible structuring; Part of a transaction cycle: round-trip indicator",
+    "statistical_features": {
+      "tx_count": 35.0,
+      "amt_mean": 9811.4834,
+      "amt_std": 8277.2871,
+      "amt_max": 45720.2188,
+      "cross_border_ratio": 0.7714,
+      "currency_mismatch_rate": 0.7714,
+      "fan_out_ratio": 0.5429,
+      "tx_per_day": 0.5556
+    },
+    "graph_features": {
+      "out_degree": 19.0,
+      "in_degree": 9.0,
+      "pagerank": 3.4e-05,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "4207375960",
+      "3136127949",
+      "2312385017",
+      "3833245296",
+      "492541922",
+      "1737741842",
+      "5894288329",
+      "1026418286",
+      "1906832751",
+      "1693647237"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-22 00:00:00",
+        "from": "4837452417",
+        "to": "6023405054",
+        "amount": 3426.4599609375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-22 00:00:00",
+        "from": "4837452417",
+        "to": "4207375960",
+        "amount": 45720.21875,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-01 00:00:00",
+        "from": "6201190917",
+        "to": "4837452417",
+        "amount": 17620.130859375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-01 00:00:00",
+        "from": "2312385017",
+        "to": "4837452417",
+        "amount": 6423.33984375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-01 00:00:00",
+        "from": "2312385017",
+        "to": "4837452417",
+        "amount": 6377.72998046875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4837452417 exhibited multi-currency layering indicators: 35 transactions with a currency mismatch rate of 77.1% and a cross-border ratio of 77.1%. Network analysis identified the account as a node in a 28-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.770. Rule triggers: Currency mismatch >50%: potential conversion layering; Mean amount <$10k & count >30: possible structuring; Part of a transaction cycle: round-trip indicator. Linked accounts identified: 4207375960, 3136127949, 2312385017, 3833245296, 492541922."
+  },
+  {
+    "timestamp": "2026-02-19T15:01:21.262821Z",
+    "account_id": "9557076027",
+    "anomaly_score": 0.769352376461029,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "burst_score, amt_cv, tx_count",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 52.0,
+      "amt_mean": 15536.4648,
+      "amt_std": 63406.4492,
+      "amt_max": 462897.4062,
+      "cross_border_ratio": 0.1731,
+      "currency_mismatch_rate": 0.2115,
+      "fan_out_ratio": 0.4808,
+      "tx_per_day": 0.619
+    },
+    "graph_features": {
+      "out_degree": 25.0,
+      "in_degree": 6.0,
+      "pagerank": 2.4e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "6389822195",
+      "2188999600",
+      "3545548014",
+      "1959112604",
+      "4926272786",
+      "4272877955",
+      "693157293",
+      "1862487256",
+      "7944386979",
+      "3378533389"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "9557076027",
+        "to": "6762630672",
+        "amount": 2425.030029296875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-08 00:00:00",
+        "from": "9557076027",
+        "to": "2362629122",
+        "amount": 3968.35009765625,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-08 00:00:00",
+        "from": "9557076027",
+        "to": "3378533389",
+        "amount": 336.5899963378906,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-23 00:00:00",
+        "from": "9557076027",
+        "to": "5109565810",
+        "amount": 850.760009765625,
+        "currency": "UK pounds",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-18 00:00:00",
+        "from": "9557076027",
+        "to": "4926272786",
+        "amount": 6993.16015625,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 9557076027 exhibited multi-currency layering indicators: 52 transactions with a currency mismatch rate of 21.2% and a cross-border ratio of 17.3%. Network analysis identified the account as a node in a 31-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.769. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 6389822195, 2188999600, 3545548014, 1959112604, 4926272786."
+  },
+  {
+    "timestamp": "2026-02-19T15:01:28.687443Z",
+    "account_id": "1516222221",
+    "anomaly_score": 0.7671127319335938,
+    "rule_score": 3,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "burst_score, amt_cv, pagerank",
+    "rule_triggers": "Currency mismatch >50%: potential conversion layering; Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 29.0,
+      "amt_mean": 18785.4941,
+      "amt_std": 70874.4219,
+      "amt_max": 386543.2188,
+      "cross_border_ratio": 0.5517,
+      "currency_mismatch_rate": 0.5517,
+      "fan_out_ratio": 0.5862,
+      "tx_per_day": 0.3671
+    },
+    "graph_features": {
+      "out_degree": 17.0,
+      "in_degree": 12.0,
+      "pagerank": 4.5e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "2639304450",
+      "1992131149",
+      "415395325",
+      "5573531331",
+      "760970304",
+      "4885590268",
+      "4326725137",
+      "5787450787",
+      "6295666332",
+      "6437594628"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "1516222221",
+        "to": "6413280758",
+        "amount": 353.3900146484375,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-22 00:00:00",
+        "from": "1516222221",
+        "to": "4326725137",
+        "amount": 386543.21875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-22 00:00:00",
+        "from": "1516222221",
+        "to": "6413280758",
+        "amount": 515.0700073242188,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "1516222221",
+        "to": "415395325",
+        "amount": 3144.719970703125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-30 00:00:00",
+        "from": "1516222221",
+        "to": "6268259525",
+        "amount": 658.219970703125,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 1516222221 exhibited multi-currency layering indicators: 29 transactions with a currency mismatch rate of 55.2% and a cross-border ratio of 55.2%. Network analysis identified the account as a node in a 29-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.767. Rule triggers: Currency mismatch >50%: potential conversion layering; Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 2639304450, 1992131149, 415395325, 5573531331, 760970304."
+  },
+  {
+    "timestamp": "2026-02-19T15:01:36.469344Z",
+    "account_id": "4013801281",
+    "anomaly_score": 0.7653615474700928,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "burst_score, amt_cv, total_degree",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 33.0,
+      "amt_mean": 21665.8262,
+      "amt_std": 85620.0781,
+      "amt_max": 497686.7812,
+      "cross_border_ratio": 0.0909,
+      "currency_mismatch_rate": 0.1212,
+      "fan_out_ratio": 0.7273,
+      "tx_per_day": 0.4925
+    },
+    "graph_features": {
+      "out_degree": 24.0,
+      "in_degree": 15.0,
+      "pagerank": 5.5e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "4305133686",
+      "7272164216",
+      "259569523",
+      "2431358999",
+      "5899167336",
+      "1999947667",
+      "2518357698",
+      "7022301523",
+      "4516311622",
+      "2120950336"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-14 00:00:00",
+        "from": "4013801281",
+        "to": "2676367365",
+        "amount": 497686.78125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-08 00:00:00",
+        "from": "4013801281",
+        "to": "7611871317",
+        "amount": 843.1599731445312,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-07 00:00:00",
+        "from": "4013801281",
+        "to": "7312502538",
+        "amount": 9985.1298828125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-20 00:00:00",
+        "from": "4013801281",
+        "to": "4516311622",
+        "amount": 5430.3798828125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-31 00:00:00",
+        "from": "4013801281",
+        "to": "8824764385",
+        "amount": 4767.25,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4013801281 exhibited multi-currency layering indicators: 33 transactions with a currency mismatch rate of 12.1% and a cross-border ratio of 9.1%. Network analysis identified the account as a node in a 39-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.765. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 4305133686, 7272164216, 259569523, 2431358999, 5899167336."
+  },
+  {
+    "timestamp": "2026-02-19T15:01:42.311068Z",
+    "account_id": "6580710794",
+    "anomaly_score": 0.7625268697738647,
+    "rule_score": 3,
+    "typology": "Round-Tripping",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "amt_max, amt_std, pagerank",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 12.0,
+      "amt_mean": 81887.2734,
+      "amt_std": 264615.3125,
+      "amt_max": 921761.6875,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0,
+      "fan_out_ratio": 0.6667,
+      "tx_per_day": 0.2034
+    },
+    "graph_features": {
+      "out_degree": 8.0,
+      "in_degree": 15.0,
+      "pagerank": 5.5e-05,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "3315255260",
+      "9094294653",
+      "7455281225",
+      "7884347622",
+      "9457280791",
+      "5639142762",
+      "5114554851",
+      "9339741558",
+      "6050344464",
+      "5979838374"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-30 00:00:00",
+        "from": "6580710794",
+        "to": "5022674948",
+        "amount": 921761.6875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-08 00:00:00",
+        "from": "9339741558",
+        "to": "6580710794",
+        "amount": 8828.2900390625,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-08 00:00:00",
+        "from": "9672964661",
+        "to": "6580710794",
+        "amount": 7809.41015625,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-08 00:00:00",
+        "from": "9672964661",
+        "to": "6580710794",
+        "amount": 7897.669921875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-08 00:00:00",
+        "from": "4783208232",
+        "to": "6580710794",
+        "amount": 10068.83984375,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 6580710794 is embedded within a detected transaction cycle (strongly connected component), a classic indicator of round-tripping. The account processed 12 transactions totalling approximately $921,762 (peak single transaction). The cyclic flow pattern combined with an anomaly score of 0.763 warrants further investigation. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement. Linked accounts identified: 3315255260, 9094294653, 7455281225, 7884347622, 9457280791."
+  },
+  {
+    "timestamp": "2026-02-19T15:01:49.134960Z",
+    "account_id": "4285106890",
+    "anomaly_score": 0.7599360346794128,
+    "rule_score": 1,
+    "typology": "Structuring / Smurfing",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "unique_currencies, total_degree, tx_count",
+    "rule_triggers": "Mean amount <$10k & count >30: possible structuring",
+    "statistical_features": {
+      "tx_count": 59.0,
+      "amt_mean": 7482.5063,
+      "amt_std": 5450.5146,
+      "amt_max": 22066.2793,
+      "cross_border_ratio": 0.322,
+      "currency_mismatch_rate": 0.339,
+      "fan_out_ratio": 0.5593,
+      "tx_per_day": 0.7024
+    },
+    "graph_features": {
+      "out_degree": 33.0,
+      "in_degree": 13.0,
+      "pagerank": 4.8e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "8745767936",
+      "3956965666",
+      "1613374944",
+      "9157314471",
+      "1226032262",
+      "4700156417",
+      "4823673976",
+      "636711094",
+      "3098342803",
+      "5250403225"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "5146441015",
+        "to": "4285106890",
+        "amount": 8423.76953125,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "953603901",
+        "to": "4285106890",
+        "amount": 7443.1298828125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "8745767936",
+        "to": "4285106890",
+        "amount": 5836.31005859375,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "3956965666",
+        "to": "4285106890",
+        "amount": 15374.6103515625,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "8357548040",
+        "to": "4285106890",
+        "amount": 4581.91015625,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4285106890 conducted 59 transactions with a mean value of $7,482.51, consistently below reporting thresholds, across 33 unique counterparties over the review period. The observed fan-out ratio of 0.56 and geographic dispersion (cross-border ratio 32.2%) are consistent with structuring or smurfing activity. The isolation forest anomaly score of 0.760 indicates statistically atypical behaviour relative to peer accounts. Rule triggers: Mean amount <$10k & count >30: possible structuring. Linked accounts identified: 8745767936, 3956965666, 1613374944, 9157314471, 1226032262."
+  },
+  {
+    "timestamp": "2026-02-19T15:01:58.632095Z",
+    "account_id": "7140861983",
+    "anomaly_score": 0.7583518028259277,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, pagerank, in_degree",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 15.0,
+      "amt_mean": 56475.2383,
+      "amt_std": 204839.0156,
+      "amt_max": 796775.0625,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0667,
+      "fan_out_ratio": 0.7333,
+      "tx_per_day": 0.2778
+    },
+    "graph_features": {
+      "out_degree": 11.0,
+      "in_degree": 19.0,
+      "pagerank": 6.9e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "2979553802",
+      "1615167979",
+      "7878449741",
+      "4441483274",
+      "568550598",
+      "2173569910",
+      "5785671204",
+      "4084996929",
+      "7335709192",
+      "5611862555"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-28 00:00:00",
+        "from": "7140861983",
+        "to": "568550598",
+        "amount": 348.8699951171875,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-07 00:00:00",
+        "from": "7140861983",
+        "to": "3829629390",
+        "amount": 196.25999450683594,
+        "currency": "UK pounds",
+        "type": "Cash Withdrawal"
+      },
+      {
+        "date": "2022-11-07 00:00:00",
+        "from": "7140861983",
+        "to": "1615167979",
+        "amount": 5749.66015625,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-08 00:00:00",
+        "from": "7140861983",
+        "to": "4263087351",
+        "amount": 1094.6300048828125,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-13 00:00:00",
+        "from": "7140861983",
+        "to": "2173569910",
+        "amount": 4530.5498046875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 7140861983 exhibited multi-currency layering indicators: 15 transactions with a currency mismatch rate of 6.7% and a cross-border ratio of 0.0%. Network analysis identified the account as a node in a 30-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.758. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 2979553802, 1615167979, 7878449741, 4441483274, 568550598."
+  },
+  {
+    "timestamp": "2026-02-19T15:02:07.410594Z",
+    "account_id": "4373616430",
+    "anomaly_score": 0.7555274963378906,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "pagerank, in_degree, burst_score",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 18.0,
+      "amt_mean": 32622.4551,
+      "amt_std": 120705.9297,
+      "amt_max": 515776.6875,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0,
+      "fan_out_ratio": 0.7778,
+      "tx_per_day": 0.2338
+    },
+    "graph_features": {
+      "out_degree": 14.0,
+      "in_degree": 20.0,
+      "pagerank": 7.2e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "4640479917",
+      "5295070857",
+      "1318964753",
+      "2689985826",
+      "7590108175",
+      "51620571",
+      "7581612951",
+      "2847133387",
+      "7356881750",
+      "2319638245"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-14 00:00:00",
+        "from": "4373616430",
+        "to": "1318964753",
+        "amount": 515776.6875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-10 00:00:00",
+        "from": "4373616430",
+        "to": "5929109728",
+        "amount": 2543.25,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-19 00:00:00",
+        "from": "4373616430",
+        "to": "9390583894",
+        "amount": 2829.5400390625,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "4373616430",
+        "to": "9390583894",
+        "amount": 5410.58984375,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-30 00:00:00",
+        "from": "4373616430",
+        "to": "7590108175",
+        "amount": 2147.1201171875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4373616430 exhibited multi-currency layering indicators: 18 transactions with a currency mismatch rate of 0.0% and a cross-border ratio of 0.0%. Network analysis identified the account as a node in a 34-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.756. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 4640479917, 5295070857, 1318964753, 2689985826, 7590108175."
+  },
+  {
+    "timestamp": "2026-02-19T15:02:16.008117Z",
+    "account_id": "4946119372",
+    "anomaly_score": 0.7552506327629089,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 19.0,
+      "amt_mean": 52135.9023,
+      "amt_std": 212933.2031,
+      "amt_max": 931251.6875,
+      "cross_border_ratio": 0.2105,
+      "currency_mismatch_rate": 0.2105,
+      "fan_out_ratio": 0.7895,
+      "tx_per_day": 0.2262
+    },
+    "graph_features": {
+      "out_degree": 15.0,
+      "in_degree": 14.0,
+      "pagerank": 5.2e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "4126386171",
+      "9493083607",
+      "9901554130",
+      "1804683862",
+      "8017342747",
+      "6439001769",
+      "411924460",
+      "5119357958",
+      "9323098309",
+      "132516678"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-08 00:00:00",
+        "from": "4946119372",
+        "to": "5550357539",
+        "amount": 1126.5799560546875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "4946119372",
+        "to": "132516678",
+        "amount": 17058.939453125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-25 00:00:00",
+        "from": "4946119372",
+        "to": "411924460",
+        "amount": 5205.009765625,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-03 00:00:00",
+        "from": "4946119372",
+        "to": "5244955013",
+        "amount": 257.4599914550781,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-15 00:00:00",
+        "from": "9992582365",
+        "to": "4946119372",
+        "amount": 9234.66015625,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 4946119372 exhibited multi-currency layering indicators: 19 transactions with a currency mismatch rate of 21.1% and a cross-border ratio of 21.1%. Network analysis identified the account as a node in a 29-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.755. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 4126386171, 9493083607, 9901554130, 1804683862, 8017342747."
+  },
+  {
+    "timestamp": "2026-02-19T15:02:25.184030Z",
+    "account_id": "5708009014",
+    "anomaly_score": 0.7510725259780884,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "unique_currencies, amt_max, amt_std",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 15.0,
+      "amt_mean": 66255.8828,
+      "amt_std": 240599.3125,
+      "amt_max": 935820.75,
+      "cross_border_ratio": 0.2667,
+      "currency_mismatch_rate": 0.3333,
+      "fan_out_ratio": 0.8,
+      "tx_per_day": 0.2055
+    },
+    "graph_features": {
+      "out_degree": 12.0,
+      "in_degree": 0.0,
+      "pagerank": 3e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "2261996263",
+      "4034595612",
+      "1612575419",
+      "612857096",
+      "542419366",
+      "6523258111",
+      "5589061610",
+      "9015173398",
+      "23699410",
+      "9616051637"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-18 00:00:00",
+        "from": "5708009014",
+        "to": "2261996263",
+        "amount": 3103.39990234375,
+        "currency": "Dirham",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-31 00:00:00",
+        "from": "5708009014",
+        "to": "8529259207",
+        "amount": 747.8599853515625,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-31 00:00:00",
+        "from": "5708009014",
+        "to": "5589061610",
+        "amount": 9125.759765625,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-28 00:00:00",
+        "from": "5708009014",
+        "to": "8529259207",
+        "amount": 692.47998046875,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-26 00:00:00",
+        "from": "5708009014",
+        "to": "1612575419",
+        "amount": 3529.68994140625,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 5708009014 exhibited multi-currency layering indicators: 15 transactions with a currency mismatch rate of 33.3% and a cross-border ratio of 26.7%. Network analysis identified the account as a node in a 12-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.751. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 2261996263, 4034595612, 1612575419, 612857096, 542419366."
+  },
+  {
+    "timestamp": "2026-02-19T15:02:32.202193Z",
+    "account_id": "2921499040",
+    "anomaly_score": 0.7500447630882263,
+    "rule_score": 3,
+    "typology": "Round-Tripping",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 31.0,
+      "amt_mean": 37362.6172,
+      "amt_std": 159613.6719,
+      "amt_max": 896684.6875,
+      "cross_border_ratio": 0.0645,
+      "currency_mismatch_rate": 0.0968,
+      "fan_out_ratio": 0.6129,
+      "tx_per_day": 0.369
+    },
+    "graph_features": {
+      "out_degree": 19.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "2908957828",
+      "2574730789",
+      "8976131993",
+      "4678675461",
+      "9672629011",
+      "654610178",
+      "494369664",
+      "1854877418",
+      "7859572382",
+      "7185972220"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-09 00:00:00",
+        "from": "2921499040",
+        "to": "2769935153",
+        "amount": 896684.6875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-12 00:00:00",
+        "from": "2921499040",
+        "to": "1854877418",
+        "amount": 421.9100036621094,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-01 00:00:00",
+        "from": "2921499040",
+        "to": "654610178",
+        "amount": 1032.4200439453125,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-11-01 00:00:00",
+        "from": "2921499040",
+        "to": "2701463199",
+        "amount": 8814.3701171875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-11-09 00:00:00",
+        "from": "2921499040",
+        "to": "2701463199",
+        "amount": 7736.4501953125,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 2921499040 is embedded within a detected transaction cycle (strongly connected component), a classic indicator of round-tripping. The account processed 31 transactions totalling approximately $896,685 (peak single transaction). The cyclic flow pattern combined with an anomaly score of 0.750 warrants further investigation. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Part of a transaction cycle: round-trip indicator; Single transaction >$100k: large value movement. Linked accounts identified: 2908957828, 2574730789, 8976131993, 4678675461, 9672629011."
+  },
+  {
+    "timestamp": "2026-02-19T15:02:40.493720Z",
+    "account_id": "7823743088",
+    "anomaly_score": 0.7471421360969543,
+    "rule_score": 1,
+    "typology": "Structuring / Smurfing",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "unique_currencies, pagerank, in_degree",
+    "rule_triggers": "Mean amount <$10k & count >30: possible structuring",
+    "statistical_features": {
+      "tx_count": 43.0,
+      "amt_mean": 6272.3486,
+      "amt_std": 2960.749,
+      "amt_max": 14134.29,
+      "cross_border_ratio": 0.2791,
+      "currency_mismatch_rate": 0.3256,
+      "fan_out_ratio": 0.5814,
+      "tx_per_day": 0.6515
+    },
+    "graph_features": {
+      "out_degree": 25.0,
+      "in_degree": 19.0,
+      "pagerank": 6.9e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "2241453133",
+      "9083163533",
+      "187834541",
+      "1828026001",
+      "8930502124",
+      "5256944210",
+      "5020152425",
+      "7148511474",
+      "8673337707",
+      "7156274383"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "7823743088",
+        "to": "1828026001",
+        "amount": 4998.02001953125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "7823743088",
+        "to": "8930502124",
+        "amount": 4359.990234375,
+        "currency": "UK pounds",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "7823743088",
+        "to": "8930502124",
+        "amount": 4405.77001953125,
+        "currency": "UK pounds",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "7823743088",
+        "to": "6340935598",
+        "amount": 6889.39013671875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-10-21 00:00:00",
+        "from": "7823743088",
+        "to": "1491029946",
+        "amount": 4674.2900390625,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 7823743088 conducted 43 transactions with a mean value of $6,272.35, consistently below reporting thresholds, across 25 unique counterparties over the review period. The observed fan-out ratio of 0.58 and geographic dispersion (cross-border ratio 27.9%) are consistent with structuring or smurfing activity. The isolation forest anomaly score of 0.747 indicates statistically atypical behaviour relative to peer accounts. Rule triggers: Mean amount <$10k & count >30: possible structuring. Linked accounts identified: 2241453133, 9083163533, 187834541, 1828026001, 8930502124."
+  },
+  {
+    "timestamp": "2026-02-19T15:02:52.029061Z",
+    "account_id": "9710838491",
+    "anomaly_score": 0.7466678619384766,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "pagerank, in_degree, cross_border_ratio",
+    "rule_triggers": "Cross-border ratio >80%: potential geographic dispersion; Currency mismatch >50%: potential conversion layering",
+    "statistical_features": {
+      "tx_count": 8.0,
+      "amt_mean": 160.1913,
+      "amt_std": 108.7459,
+      "amt_max": 347.67,
+      "cross_border_ratio": 1.0,
+      "currency_mismatch_rate": 1.0,
+      "fan_out_ratio": 0.125,
+      "tx_per_day": 1.6
+    },
+    "graph_features": {
+      "out_degree": 1.0,
+      "in_degree": 17.0,
+      "pagerank": 6.2e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "7849602436",
+      "2044418189",
+      "8187481308",
+      "961417018",
+      "2489941603",
+      "454546488",
+      "5889517784",
+      "9928595739",
+      "9779285780",
+      "2575346517"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-11-15 00:00:00",
+        "from": "9710838491",
+        "to": "93722998",
+        "amount": 173.61000061035156,
+        "currency": "UK pounds",
+        "type": "Cash Withdrawal"
+      },
+      {
+        "date": "2022-11-16 00:00:00",
+        "from": "9710838491",
+        "to": "93722998",
+        "amount": 221.3699951171875,
+        "currency": "UK pounds",
+        "type": "Cash Withdrawal"
+      },
+      {
+        "date": "2022-11-16 00:00:00",
+        "from": "9710838491",
+        "to": "93722998",
+        "amount": 194.9499969482422,
+        "currency": "UK pounds",
+        "type": "Cash Withdrawal"
+      },
+      {
+        "date": "2022-11-17 00:00:00",
+        "from": "9710838491",
+        "to": "93722998",
+        "amount": 198.10000610351562,
+        "currency": "UK pounds",
+        "type": "Cash Withdrawal"
+      },
+      {
+        "date": "2022-11-17 00:00:00",
+        "from": "9710838491",
+        "to": "93722998",
+        "amount": 347.6700134277344,
+        "currency": "UK pounds",
+        "type": "Cash Withdrawal"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 9710838491 exhibited multi-currency layering indicators: 8 transactions with a currency mismatch rate of 100.0% and a cross-border ratio of 100.0%. Network analysis identified the account as a node in a 18-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.747. Rule triggers: Cross-border ratio >80%: potential geographic dispersion; Currency mismatch >50%: potential conversion layering. Linked accounts identified: 7849602436, 2044418189, 8187481308, 961417018, 2489941603."
+  },
+  {
+    "timestamp": "2026-02-19T15:03:02.157784Z",
+    "account_id": "1753737734",
+    "anomaly_score": 0.7460882663726807,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 0.6666666666666666,
+    "top_anomaly_features": "amt_max, burst_score, amt_cv",
+    "rule_triggers": "Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 30.0,
+      "amt_mean": 38754.9375,
+      "amt_std": 160325.3438,
+      "amt_max": 886423.1875,
+      "cross_border_ratio": 0.0,
+      "currency_mismatch_rate": 0.0333,
+      "fan_out_ratio": 0.6333,
+      "tx_per_day": 0.411
+    },
+    "graph_features": {
+      "out_degree": 19.0,
+      "in_degree": 10.0,
+      "pagerank": 3.8e-05,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "5604863148",
+      "2007687836",
+      "3631103531",
+      "7264187390",
+      "8588271440",
+      "6292864895",
+      "7390893698",
+      "6333847642",
+      "7559654956",
+      "8101969797"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-18 00:00:00",
+        "from": "1753737734",
+        "to": "1998430118",
+        "amount": 1092.0899658203125,
+        "currency": "Swiss franc",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-02 00:00:00",
+        "from": "1753737734",
+        "to": "8588271440",
+        "amount": 31345.720703125,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      },
+      {
+        "date": "2022-11-06 00:00:00",
+        "from": "1753737734",
+        "to": "292614782",
+        "amount": 1338.6600341796875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-11-25 00:00:00",
+        "from": "1753737734",
+        "to": "7264187390",
+        "amount": 2144.419921875,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-12-03 00:00:00",
+        "from": "1753737734",
+        "to": "1727110323",
+        "amount": 16067.25,
+        "currency": "UK pounds",
+        "type": "ACH"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 1753737734 exhibited multi-currency layering indicators: 30 transactions with a currency mismatch rate of 3.3% and a cross-border ratio of 0.0%. Network analysis identified the account as a node in a 29-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.746. Rule triggers: Amount CV >3: burst/irregular transaction amounts; Single transaction >$100k: large value movement. Linked accounts identified: 5604863148, 2007687836, 3631103531, 7264187390, 8588271440."
+  },
+  {
+    "timestamp": "2026-02-19T15:03:13.912796Z",
+    "account_id": "513161146",
+    "anomaly_score": 0.7457197904586792,
+    "rule_score": 2,
+    "typology": "Unclassified",
+    "typology_confidence": 0.0,
+    "top_anomaly_features": "amt_std, amt_max, amt_mean",
+    "rule_triggers": "Currency mismatch >50%: potential conversion layering; Single transaction >$100k: large value movement",
+    "statistical_features": {
+      "tx_count": 4.0,
+      "amt_mean": 370262.3438,
+      "amt_std": 356241.5938,
+      "amt_max": 804708.75,
+      "cross_border_ratio": 0.75,
+      "currency_mismatch_rate": 0.75,
+      "fan_out_ratio": 1.0,
+      "tx_per_day": 0.1143
+    },
+    "graph_features": {
+      "out_degree": 4.0,
+      "in_degree": 0.0,
+      "pagerank": 3e-06,
+      "betweenness": 0.0,
+      "in_cycle": 0.0
+    },
+    "linked_accounts": [
+      "6620607804",
+      "9223961090",
+      "6157017391",
+      "4727125845",
+      "773979891",
+      "9409167952",
+      "1213069681",
+      "7991848005",
+      "6286930995",
+      "5446482786"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-11-30 00:00:00",
+        "from": "513161146",
+        "to": "6286930995",
+        "amount": 116983.71875,
+        "currency": "Moroccan dirham",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-12-19 00:00:00",
+        "from": "513161146",
+        "to": "5446482786",
+        "amount": 804708.75,
+        "currency": "Moroccan dirham",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-12-21 00:00:00",
+        "from": "513161146",
+        "to": "6620607804",
+        "amount": 43649.23046875,
+        "currency": "Moroccan dirham",
+        "type": "Cross-border"
+      },
+      {
+        "date": "2022-11-17 00:00:00",
+        "from": "513161146",
+        "to": "773979891",
+        "amount": 515707.65625,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 513161146 was flagged by the AML detection system with an anomaly score of 0.746. While no dominant typology was conclusively matched, the following rule violations were recorded: Currency mismatch >50%: potential conversion layering; Single transaction >$100k: large value movement. Manual review is recommended to determine SAR eligibility. Linked accounts identified: 6620607804, 9223961090, 6157017391, 4727125845, 773979891."
+  },
+  {
+    "timestamp": "2026-02-19T15:03:29.122207Z",
+    "account_id": "2610287458",
+    "anomaly_score": 0.7420307993888855,
+    "rule_score": 2,
+    "typology": "Layering (Multi-hop)",
+    "typology_confidence": 1.0,
+    "top_anomaly_features": "unique_currencies, out_degree, unique_receivers",
+    "rule_triggers": "Currency mismatch >50%: potential conversion layering; Part of a transaction cycle: round-trip indicator",
+    "statistical_features": {
+      "tx_count": 45.0,
+      "amt_mean": 10369.7559,
+      "amt_std": 7935.6494,
+      "amt_max": 29554.5195,
+      "cross_border_ratio": 0.6222,
+      "currency_mismatch_rate": 0.6444,
+      "fan_out_ratio": 0.6444,
+      "tx_per_day": 0.5556
+    },
+    "graph_features": {
+      "out_degree": 29.0,
+      "in_degree": 1.0,
+      "pagerank": 6e-06,
+      "betweenness": 0.0,
+      "in_cycle": 1.0
+    },
+    "linked_accounts": [
+      "5061275160",
+      "1963986070",
+      "1932943523",
+      "1253589385",
+      "174798628",
+      "758206333",
+      "7415590332",
+      "2118098846",
+      "9986090632",
+      "4807198292"
+    ],
+    "tx_chain_sample": [
+      {
+        "date": "2022-10-11 00:00:00",
+        "from": "2610287458",
+        "to": "1577340534",
+        "amount": 3863.199951171875,
+        "currency": "UK pounds",
+        "type": "ACH"
+      },
+      {
+        "date": "2022-10-09 00:00:00",
+        "from": "2610287458",
+        "to": "2098159647",
+        "amount": 20181.349609375,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-12 00:00:00",
+        "from": "2610287458",
+        "to": "1963986070",
+        "amount": 20071.279296875,
+        "currency": "UK pounds",
+        "type": "Cheque"
+      },
+      {
+        "date": "2022-10-17 00:00:00",
+        "from": "2610287458",
+        "to": "1748308933",
+        "amount": 17155.310546875,
+        "currency": "UK pounds",
+        "type": "Credit card"
+      },
+      {
+        "date": "2022-10-25 00:00:00",
+        "from": "2610287458",
+        "to": "7415590332",
+        "amount": 4973.47998046875,
+        "currency": "UK pounds",
+        "type": "Debit card"
+      }
+    ],
+    "sar_narrative": "ACCOUNT 2610287458 exhibited multi-currency layering indicators: 45 transactions with a currency mismatch rate of 64.4% and a cross-border ratio of 62.2%. Network analysis identified the account as a node in a 30-degree transaction chain, suggesting deliberate placement and layering across jurisdictions. Anomaly score: 0.742. Rule triggers: Currency mismatch >50%: potential conversion layering; Part of a transaction cycle: round-trip indicator. Linked accounts identified: 5061275160, 1963986070, 1932943523, 1253589385, 174798628."
+  }
+]

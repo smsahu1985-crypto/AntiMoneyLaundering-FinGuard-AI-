@@ -1,0 +1,11 @@
+{
+  "PR_AUC": 0.0719,
+  "Precision": 0.083,
+  "Recall": 0.2397,
+  "F1_Score": 0.1233,
+  "Recall_at_Top1pct": 0.0731,
+  "False_Positive_Rate": 0.0467,
+  "Total_Accounts": 75884,
+  "True_Suspicious": 1314,
+  "Flagged": 3795
+}

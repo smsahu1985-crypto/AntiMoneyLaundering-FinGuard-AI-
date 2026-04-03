@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Inter, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #1e293b;
+}
+
+.app {
+  padding: 20px 30px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.header p {
+  color: #64748b;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.main-layout {
+  display: flex;
+  gap: 20px;
+  height: 85vh;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 35%;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.panel-header {
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.account-table {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.table-head {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  font-weight: 600;
+  padding: 10px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  padding: 12px 10px;
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.table-row:hover {
+  background: #eef2ff;
+}
+
+.table-row.active {
+  background: #dbeafe;
+}
+
+.account-id {
+  font-weight: 600;
+}
+
+.risk {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.typology {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  width: 65%;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+}
+
+.case-header {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.json-box {
+  background: #020617;
+  color: #22c55e;
+  padding: 12px;
+  border-radius: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+.sar-section {
+  margin-bottom: 15px;
+}
+
+.sar-btn {
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sar-btn:hover {
+  background: #1e40af;
+}
+
+.sar-box {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+}
+
+.placeholder {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  text-align: center;
+}
