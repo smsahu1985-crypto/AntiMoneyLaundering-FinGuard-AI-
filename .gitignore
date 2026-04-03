@@ -1,1 +1,4 @@
 SAML_D.csv 
+venv/
+__pycache__/
+*.pyc
